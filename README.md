@@ -43,21 +43,21 @@ Anna.
 * ``//*[@id="login-label"]``
 * ``//label[text() = "Login"]``
 * ``//label[@for = "login"]``
-* ``(//label/text())[1]``
+* ``(//label[text()])[1]``
 3. Input "Login":
 * ``//*[@id="login"]``
 * ``//input[@name="login"]``
 * ``//*[@id="login-label"]/following-sibling::div/input``
 4. Label "Password":
 * ``//*[@id="password-label"]``
-* ``(//label/text())[2]``
+* ``(//label[text()])[2]``
 * ``//label[@for = "password"]``
 5. Input "Password":
 * ``//*[@id="password"]``
 * ``//input[@name="password"]``
 * ``//*[@id="password-label"]/following-sibling::div/input``
 6. Link "Remind Password":
-* ``//a/text()``
+* ``//a[text()]``
 * ``//div[@class="MuiCardContent-root"]/a``
 * ``//h5/following-sibling::a``
 7. Button with localization:
