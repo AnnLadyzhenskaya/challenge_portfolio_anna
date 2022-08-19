@@ -13,7 +13,7 @@ from utils.credentials import test_user
 class TestLoginPage(unittest.TestCase):
 
     @classmethod
-    def setUpClass(self):
+    def setUp(self):
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
@@ -38,5 +38,5 @@ class TestLoginPage(unittest.TestCase):
                                             self.login_page.header_of_box)
 
     @classmethod
-    def tearDownClass(self):
+    def tearDown(self):
         self.driver.quit()
