@@ -7,7 +7,7 @@ from pages.login_page import LoginPage
 from utils.settings import IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from utils.credentials import test_user
+from utils.credentials import TestUser
 
 
 class TestLoginPage(unittest.TestCase):
@@ -27,7 +27,7 @@ class TestLoginPage(unittest.TestCase):
 
     """ test login functionality of the page"""
     def test_log_in_to_the_system(self):
-        self.login_page.do_login(test_user['login'], test_user['password'])
+        self.login_page.do_login(TestUser.TEST_LOGIN, TestUser.TEST_PASSWORD)
         time.sleep(5)
         dashboard = Dashboard(self.driver)
         dashboard.check_title()
