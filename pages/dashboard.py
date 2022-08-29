@@ -9,12 +9,6 @@ class Dashboard (BasePage):
     # title
     page_title_xpath = "//h6[text() = 'Scouts Panel']"
 
-    # pages
-    main_page_button_xpath = "//ul[1]/div[@role='button'][1]"
-    players_button_xpath = "//ul[1]/div[@role='button'][2]"
-    language_button_xpath = "//ul[2]/div[@role='button'][1]"
-    sign_out_button_xpath = "//ul[2]/div[@role='button'][2]"
-
     # tickets
     players_count_text_xpath = "(//main/div[count(div) = 4]//div[text()])[1]"
     matches_count_text_xpath = "(//main/div[count(div) = 4]//div[text()])[2]"

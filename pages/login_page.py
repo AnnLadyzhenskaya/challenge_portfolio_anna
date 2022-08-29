@@ -6,7 +6,7 @@ class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//button[@type='submit']"
-    expected_title = 'Scouts panel - sign in'
+    expected_title = ['Scouts panel - sign in', 'Scouts panel - zaloguj']
     title_of_box_xpath = '//form//h5'
     header_of_box = 'Scouts Panel'
 
@@ -25,5 +25,5 @@ class LoginPage(BasePage):
         self.click_sign_in_button()
 
     def check_title(self):
-        assert self.get_page_title(self.login_url) == self.expected_title
+        assert self.get_page_title() in self.expected_title
 
