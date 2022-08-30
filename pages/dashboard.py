@@ -38,7 +38,10 @@ class Dashboard (BasePage):
 
     def check_title(self):
         time.sleep(3)
-        assert self.get_page_title(self.dashboard_url) == self.expected_title
+        assert self.get_page_title() == self.expected_title
+
+    def go_to_add_player_form(self):
+        self.click_on_the_element(self.add_player_link_xpath)
 
 
 

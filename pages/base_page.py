@@ -34,3 +34,13 @@ class BasePage():
         element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, selector)))
         return element
 
+    def is_field_empty(self, selector, selector_type=By.XPATH):
+        element = self.driver.find_element(selector_type, selector)
+        if element.value == "":
+            return True
+        else:
+            return False
+
+
+
+
