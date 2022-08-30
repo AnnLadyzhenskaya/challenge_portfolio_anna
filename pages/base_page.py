@@ -36,7 +36,7 @@ class BasePage():
 
     def is_field_empty(self, selector, selector_type=By.XPATH):
         element = self.driver.find_element(selector_type, selector)
-        if element.value == "":
+        if element.text == "":
             return True
         else:
             return False
