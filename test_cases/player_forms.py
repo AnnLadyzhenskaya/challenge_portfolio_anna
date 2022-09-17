@@ -42,7 +42,7 @@ class TestPlayerForms(unittest.TestCase):
 
         # submit and wait until toasts disappear
         self.player.click_submit_button()
-        time.sleep(10)
+        # time.sleep(10)
 
         # check if redirected to edit page
         self.player.check_title('edit')

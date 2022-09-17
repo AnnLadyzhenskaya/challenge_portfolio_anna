@@ -41,6 +41,10 @@ class BasePage():
         else:
             return False
 
+    def check_dynamic_text_on_page(self, selector, text):
+        element = WebDriverWait(self.driver, 10).until(EC.text_to_be_present_in_element((By.XPATH, selector), text))
+        return element
+
 
 
 

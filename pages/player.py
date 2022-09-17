@@ -39,11 +39,12 @@ class Player(BasePage):
 
     """ check title of the page in both localizations"""
     """ actual title of edit page has the name of player, that's why we check substring"""
+    """TODO: add checking header in both languages"""
     def check_title(self, page):
         if page == 'add':
             assert self.get_page_title() in self.add_player_expected_titles
         elif page == 'edit':
-            self.is_visible(self.edit_player_header_xpath)
+            self.check_dynamic_text_on_page(self.edit_player_header_xpath, "Edit player")
             for title in self.edit_player_expected_titles:
                 if title in self.get_page_title():
                     return True
